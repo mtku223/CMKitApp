@@ -1,0 +1,211 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 20px;
+  height: 100vh; /* Set the body height to the viewport height */
+  overflow: hidden; /* Hide overflow to prevent overall page scrolling */
+}
+
+#category-container {
+  width: 20%; /* Adjust width as needed */
+  padding: 10px;
+  margin-right: 20px; /* Margin between the category and product containers */
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: white;
+  position: fixed;
+  top: 20px; /* Adjust top margin */
+  left: 20px; /* Adjust left margin */
+  bottom: 20px; /* Adjust bottom margin */
+  overflow-y: auto;
+}
+
+#product-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: calc(
+    20% + 40px
+  ); /* Left margin to account for category-container width plus margin */
+  margin-right: calc(
+    20% + 40px
+  ); /* Right margin to account for cart width plus margin */
+  overflow-y: auto;
+  padding: 10px;
+}
+
+#cart {
+  width: 20%; /* Adjust width as needed */
+  padding: 10px;
+  margin-left: 20px; /* Margin between the product and cart containers */
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: white;
+  position: fixed;
+  top: 20px; /* Adjust top margin */
+  right: 20px; /* Adjust right margin */
+  bottom: 20px; /* Adjust bottom margin */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column; /* Keeps the elements in a vertical line */
+}
+
+#category-container,
+#cart {
+  max-height: 100vh; /* 100% of the viewport height */
+  overflow-y: auto; /* Make it scrollable */
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.category-header {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  padding: 5px 0;
+  border-bottom: 2px solid #ddd;
+}
+
+/* #cart {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  width: 20%; /* Adjust width as needed 
+  display: flex;
+  flex-direction: column;
+} */
+
+#cart h2 {
+  margin-top: 0;
+}
+
+#cart-items li {
+  list-style-type: none;
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+  flex-grow: 1; /* Allow the item list to grow and fill space */
+}
+
+/*Footer CSS elements*/
+
+.cart-footer {
+  margin-top: auto; /* Pushes the footer to the bottom of the cart */
+  padding-top: 10px; /* Optional: Adds some space above the footer */
+}
+
+.price-per-pack,
+.total-estimate {
+  margin-top: 10px;
+  background-color: #f0f0f0; /* Light gray background for separation */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#price-per-pack,
+#total-estimate {
+  font-weight: bold;
+}
+
+#add-details-button {
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; /* Space above the button */
+}
+
+#add-details-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.disclaimer {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 10px; /* Space above the disclaimer */
+}
+
+.addButton {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+  display: block;
+  margin-top: 10px;
+}
+
+#category-container a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: blue;
+  margin-bottom: 5px;
+}
+
+#category-container a:hover {
+  text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+  border-radius: 5px;
+}
+
+/* Buttons */
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.removeButton {
+  cursor: pointer;
+}
+
+.addButton {
+  cursor: pointer;
+}
